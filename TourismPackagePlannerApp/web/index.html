@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tourism package planner application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+        <div>
+            <h1>Tourism package planner application</h1>
+            <p>First of all, we need you to fill out the following information according to your needs<br>
+               to create the perfect tourism package to suit your preference
+            </p>
+        </div>
+
+        <form action="VacationServlet" method="get">
+            <p>City name: <input type="text" name="city" size="40" required>  Country code: <input type="text" name="countryCode" size="3" required></p>
+
+            <p>From (IATA code): <input type="text" name="from" size="5" required></p>
+            <p>To (IATA code): <input type="text" name="to" size="5" required></p>
+
+            <p>Budget <input type="number" name="budget" min="0" required>
+                <select id="currency" name="currency">
+                    <option value="Euros">Euros</option>
+                    <option value="Dollars">Dollars</option>
+                    <option value="Pounds">Pounds</option>
+                </select>
+                <select id="unit" name="unit">
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                </select></p>
+
+            <p>Number of adults(18+): <input type="number" name="adults" min="1" required></p>
+            <p>Number of minors(17-): <input type="number" name="minors" min="0" required></p>
+
+            <p>Number of rooms: <input type="number" name="rooms" min="1" required></p>
+
+            <p><label for="start">Departure date:</label>
+            <input type="date" id="viajeIda" name="departureDate" required>
+                <script>
+                //set actual day like the first option in the calendar
+                document.getElementById('viajeIda').value = new Date().toISOString().substring(0, 10);
+                //set the min day until today
+                document.getElementById("viajeIda").setAttribute("min", new Date().toISOString().substring(0, 10));
+                //set max day until 1 month later
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+2; //January is 0!
+                var yyyy = today.getFullYear();
+                 if(dd<10){
+                        dd='0'+dd;
+                    } 
+                    if(mm<10){
+                        mm='0'+mm;
+                    } 
+
+                today = yyyy+'-'+mm+'-'+dd;
+                document.getElementById("viajeIda").setAttribute("max", today);
+                </script>
+            <p>
+
+
+            <p><label for="start">Return date:</label>
+                <input type="date" id="viajeVuelta" name="returnDate" required>
+                <!-- <script>
+                //set actual day like the first option in the calendar
+                document.getElementById('viajeVuelta').value = new Date().toISOString().substring(0, 10);
+                //set the min day until today
+                document.getElementById("viajeVuelta").setAttribute("min", new Date().toISOString().substring(0, 10));
+                //set max day until 1 month later
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+2; //January is 0!
+                var yyyy = today.getFullYear();
+                 if(dd<10){
+                        dd='0'+dd;
+                    } 
+                    if(mm<10){
+                        mm='0'+mm;
+                    } 
+
+                today = yyyy+'-'+mm+'-'+dd;
+                document.getElementById("viajeVuelta").setAttribute("max", today);
+                </script> -->
+            </p>
+
+            <p><input type="reset" value="Clear information"></p>
+
+            <p><input type = "submit" value = "Vacation!" /></p>
+        </form>
+        
+        <form action="./main.html">
+            <input type="submit" value="Go to main page" />
+        </form>
+        
+        <p>*Please note: If the page returns blank it means that no results were found in our webservices that fit your needs</p>
+    </body>
+</html>

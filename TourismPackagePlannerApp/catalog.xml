@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://ws.docencia.ces.siani.es/a18/TrabajoIS_SOAP_FlightCalculator/SOAPFlightCalculator?WSDL" uri="src/conf/xml-resources/web-service-references/SOAPFlightCalculator/wsdl/ws.docencia.ces.siani.es/a18/TrabajoIS_SOAP_FlightCalculator/SOAPFlightCalculator.wsdl"/>
+    <system systemId="http://ws.docencia.ces.siani.es/a18/TrabajoIS_SOAP_FlightCalculator/SOAPFlightCalculator?xsd=1" uri="src/conf/xml-resources/web-service-references/SOAPFlightCalculator/wsdl/ws.docencia.ces.siani.es/a18/TrabajoIS_SOAP_FlightCalculator/SOAPFlightCalculator.xsd_1.xsd"/>
+</catalog>

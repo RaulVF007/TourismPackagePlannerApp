@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01-may-2021, 14:53:06
+    Author     : Lab-DIS
+*/
+body {
+    background-color: #DEF1F1;
+    margin: 25px 50px 25px;
+}
+
+h1{
+    font-family: "Moncao", Monospace;
+}
+
+h2{
+    font-family: "Moncao", Monospace;
+}
+
+h3 {
+    font-family: "Moncao", Monospace;
+    font-size: 1em;
+}
+
+p {
+    font-family: "Moncao", Monospace;
+}
+
+input[type=text] {
+  border: 2px solid #079292;
+  border-radius: 3px;
+  transition: width 0.2s ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+li {
+    font-family: "Moncao", Monospace;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #09D3ED;
+  opacity: 0.8;
+}
+
+input[type=text]:focus {
+    /*width: 30%;*/
+}
+
+input[type=number] {
+  border: 2px solid #079292;
+  border-radius: 3px;
+  transition: width 0.2s ease-in-out;
+}
+
+input[type=number]:focus {
+    /*width: 30%;*/
+}
+
+input[type=date] {
+  border: 2px solid #079292;
+  border-radius: 3px;
+  transition: width 0.2s ease-in-out;
+}
+
+input[type=date]:focus {
+    /*width: 30%;*/
+}
+
+form {
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+input[type=submit] {
+    background-color: #D7DADA;
+    border: 1px solid blue;
+}
+
+input[type=reset] {
+    background-color: #D7DADA;
+    border: 1px solid blue;
+}

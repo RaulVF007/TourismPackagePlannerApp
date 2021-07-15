@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Save in planner</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <form name="TourPackage" method="post" action="PlannerAddDB">
+            <h1>Fill out the following form and save your plan</h1>
+            <p>First Name: <input type="text" name="firstName"></p>
+            <p>Last Name: <input type="text" name="lastName"></p>
+            <p>Check in: <input type="text" name="checkIn"> (yyyy-MM-dd)</p>
+            <p>Check out: <input type="text" name="checkOut"> (yyyy-MM-dd)</p>
+            <p>Destination: <input type="text" name="destination"></p>
+            <p>Hotel: <input type="text" name="hotel"></p>
+            <p>Airline: <input type="text" name="flight"></p>
+            <p>Budget: <input type="text" name="budget"></p>
+            <p><input type="submit" value="Save vacation plan" name="clientbutton">
+        </form>
+        <form action="./main.html">
+            <input type="submit" value="Go to main page" name="clientbutton"/> 
+        </form>
+    </body>  
+</html>
